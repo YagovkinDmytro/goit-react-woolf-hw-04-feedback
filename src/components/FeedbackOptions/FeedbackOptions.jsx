@@ -1,13 +1,13 @@
-const FeedbackOptions = ({ options, onLeaveFeedback }) => {
+const FeedbackOptions = ({ options, handleclickFeedback }) => {
   return (
     <div className="block-feedback">
       {options.map(option => (
         <button
+          key={option}
           className="button-feedback"
           type="button"
-          key={option}
           style={{ textTransform: 'capitalize' }}
-          onClick={() => onLeaveFeedback(option)}
+          onClick={() => handleclickFeedback(option)}
         >
           {option}
         </button>
